@@ -120,17 +120,13 @@ public class HwSeleniumChromee {
         card.click();
         Thread.sleep(2000);
 
-        WebElement billingAddress = driver.findElement(By.className("check"));
-        billingAddress.click();
-        Thread.sleep(2000);
 
-        /*
 
         WebElement selectcard = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[2]/div[2]/div[3]/div[1]/div[2]/div/div/div[1]/div/div/div/div[1]/div/div[1]/div/div/div/div[2]/ul/li/img"));
         selectcard.click();
         Thread.sleep(2000);
 
-
+/*
 
         WebElement billingAddress = driver.findElement(By.className("check"));
         billingAddress.click();
