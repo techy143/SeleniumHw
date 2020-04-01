@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.Random;
+
 public class HwSeleniumChrome {
 
 
@@ -29,7 +31,9 @@ public class HwSeleniumChrome {
             WebElement Email = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[3]/form/div[1]/div[2]/input"));
             Email.clear();
             System.out.println("Box cleared");
-            Email.sendKeys("tauhidechy@outlook.com");
+            Random random = new Random();
+            Email.sendKeys("tauhidechy"+random.nextInt(1000)+"@outlook.com");
+
             System.out.println("Input Email Address");
             Thread.sleep(3000);
 
