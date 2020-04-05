@@ -8,14 +8,15 @@ import org.openqa.selenium.support.ui.Select;
 
 public class HwSeleniumFirefoxx {
 
+
     public static void main(String[] args) throws Exception{
 
-        hwFireefox();
+        hwfirefox();
 
     }
 
 
-    public static void hwFireefox () throws Exception{
+    public static void hwfirefox () throws Exception{
         System.setProperty("webdriver.gecko.driver","/Users/tuhidzmac/Projects/drivers/geckodriver");
 
         WebDriver driver = new FirefoxDriver();
@@ -31,7 +32,7 @@ public class HwSeleniumFirefoxx {
         System.out.println("Box cleared");
         Email.sendKeys("tauhidechy147@outlook.com");
         System.out.println("Input Email Address");
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
 
 
@@ -40,13 +41,13 @@ public class HwSeleniumFirefoxx {
         System.out.println("Box cleared");
         Password.sendKeys("Canada143");
         System.out.println("Enter ur Password ");
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
 
         WebElement Login = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[1]/form/button"));
         Login.click();
         System.out.println("Click Login Bottom");
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         System.out.println("Login Successfully");
 
@@ -77,24 +78,24 @@ public class HwSeleniumFirefoxx {
 
         WebElement FullName = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/div[1]/form/div/div[1]/div/div/div[1]/div/div/input"));
         FullName.clear();
-        FullName.sendKeys("Wakil E Chy");
-        Thread.sleep(2000);
+        FullName.sendKeys("Tauhid E Chy");
+        Thread.sleep(1000);
 
         WebElement Address = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/div[1]/form/div/div[1]/div/div/div[2]/div[1]/div/input"));
         Address.clear();
         Address.sendKeys("5800 Arnet street");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         WebElement city = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/div[1]/form/div/div[1]/div/div/div[3]/div[1]/div/input"));
         city.clear();
         city.sendKeys("Falls Church");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
 
         Select objstate = new Select (driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/div[1]/form/div/div[1]/div/div/div[3]/div[2]/div/select")));
         //objstate.selectByIndex(32);
         objstate.selectByValue("MI");
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
 
         System.out.println(" State selected MI ( Michigan ) ");
@@ -102,29 +103,29 @@ public class HwSeleniumFirefoxx {
         WebElement postcode = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/div[1]/form/div/div[1]/div/div/div[3]/div[3]/div/input"));
         postcode.clear();
         postcode.sendKeys("28454");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         WebElement Mob = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/div[1]/form/div/div[1]/div/div/div[4]/div/div/input"));
         Mob.clear();
         Mob.sendKeys("+1 354-675-9011");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         WebElement continuee = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/div[2]/a/span"));
         continuee.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
 
         WebElement card = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[2]/div[2]/div[3]/div[1]/div[1]/div/ul/li[1]/a"));
         card.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
-        /*
+
 
         WebElement selectcard = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[2]/div[2]/div[3]/div[1]/div[2]/div/div/div[1]/div/div/div/div[1]/div/div[1]/div/div/div/div[2]/ul/li/img"));
         selectcard.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
-
+/*
 
         WebElement billingAddress = driver.findElement(By.className("check"));
         billingAddress.click();
@@ -150,7 +151,7 @@ public class HwSeleniumFirefoxx {
 
         WebElement PlaceOrder = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[3]/div[1]/div[2]/div[6]/a/span"));
         PlaceOrder.click();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         System.out.println(" THANK YOU ");
 

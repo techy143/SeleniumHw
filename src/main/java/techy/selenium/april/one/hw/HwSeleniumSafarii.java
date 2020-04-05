@@ -3,24 +3,24 @@ package techy.selenium.april.one.hw;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class HwSeleniumChromee {
+public class HwSeleniumSafarii {
+
 
 
     public static void main(String[] args) throws Exception{
 
-        hwchromee();
+        hwSafariii();
 
     }
 
 
-    public static void hwchromee () throws Exception{
-        System.setProperty("webdriver.chrome.driver","/Users/tuhidzmac/Projects/drivers/chromedriver");
+    public static void hwSafariii () throws Exception{
+        //System.setProperty("webdriver.chrome.driver","/Users/tuhidzmac/Projects/drivers/geckodriver");
 
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new SafariDriver();
         driver.manage().window().maximize();
         driver.navigate().to("https://demo.broadleafcommerce.org/login");
         System.out.println(driver.getTitle());
@@ -53,17 +53,18 @@ public class HwSeleniumChromee {
         System.out.println("Login Successfully");
 
 
-        WebElement Iteam = driver.findElement(By.xpath("/html/body/div/div/div[2]/div[2]/div[3]/div/div[2]/h4/a"));
+
+       WebElement Iteam = driver.findElement(By.xpath("//*[@id=\"products\"]/div[5]/div/div[2]/h4/a"));
         Iteam.click();
         System.out.println("Clicked the Iteam");
         Thread.sleep(2000);
 
-        WebElement AddIteam = driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div[2]/div[4]/div[1]/form/div/div[1]/button"));
+        WebElement AddIteam = driver.findElement(By.xpath("//*[@id=\"product-main-button-panel\"]/div[1]/button/span"));
         AddIteam.click();
         System.out.println("Iteam Added to Cart");
         Thread.sleep(2000);
 
-        WebElement view = driver.findElement(By.xpath("/html/body/nav/div/div[1]/ul[2]/li[4]/ul/li[3]/a"));
+        WebElement view = driver.findElement(By.xpath("//*[@id=\"sectionsNav\"]/div/div[1]/ul[2]/li[4]/ul/li[3]/a"));
         view.click();
         Thread.sleep(2000);
 
@@ -126,7 +127,7 @@ public class HwSeleniumChromee {
         selectcard.click();
         Thread.sleep(1000);
 
-/*
+
 
         WebElement billingAddress = driver.findElement(By.className("check"));
         billingAddress.click();
@@ -144,7 +145,7 @@ public class HwSeleniumChromee {
         cardExp.clear();
         cardExp.sendKeys("01/99");
 
-        */
+
 
         WebElement continueNext = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[2]/div[2]/div[3]/div[2]/a/span"));
         continueNext.click();
