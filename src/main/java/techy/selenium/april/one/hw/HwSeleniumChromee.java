@@ -1,23 +1,33 @@
 package techy.selenium.april.one.hw;
 
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class HwSeleniumChromee {
 
-
+/*
     public static void main(String[] args) throws Exception{
 
         hwchromee();
 
     }
+*/
+
+    @BeforeClass
+    public static void beforeClass(){
 
 
-    public static void hwchromee () throws Exception{
+    }
+
+    @Test
+
+    public void hwchromee () throws Exception{
         System.setProperty("webdriver.chrome.driver","/Users/tuhidzmac/Projects/drivers/chromedriver");
 
         WebDriver driver = new ChromeDriver();
@@ -33,7 +43,7 @@ public class HwSeleniumChromee {
         System.out.println("Box cleared");
         Email.sendKeys("tauhidechy147@outlook.com");
         System.out.println("Input Email Address");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
 
 
@@ -42,13 +52,13 @@ public class HwSeleniumChromee {
         System.out.println("Box cleared");
         Password.sendKeys("Canada143");
         System.out.println("Enter ur Password ");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
 
         WebElement Login = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[1]/form/button"));
         Login.click();
         System.out.println("Click Login Bottom");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         System.out.println("Login Successfully");
 
@@ -56,26 +66,26 @@ public class HwSeleniumChromee {
         WebElement Iteam = driver.findElement(By.xpath("/html/body/div/div/div[2]/div[2]/div[3]/div/div[2]/h4/a"));
         Iteam.click();
         System.out.println("Clicked the Iteam");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         WebElement AddIteam = driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div[2]/div[4]/div[1]/form/div/div[1]/button"));
         AddIteam.click();
         System.out.println("Iteam Added to Cart");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         WebElement view = driver.findElement(By.xpath("/html/body/nav/div/div[1]/ul[2]/li[4]/ul/li[3]/a"));
         view.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         System.out.println("Viewed Iteam on Cart");
 
         WebElement Pay = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[3]/div[1]/div[2]/div[5]/div[1]/a/span"));
         Pay.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         WebElement Shipping = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/div[1]/form/div/div[2]/div[2]/label/span[1]"));
         Shipping.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         WebElement FullName = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/div[1]/form/div/div[1]/div/div/div[1]/div/div/input"));
         FullName.clear();
@@ -148,17 +158,25 @@ public class HwSeleniumChromee {
 
         WebElement continueNext = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[2]/div[2]/div[3]/div[2]/a/span"));
         continueNext.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         WebElement PlaceOrder = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[3]/div[1]/div[2]/div[6]/a/span"));
         PlaceOrder.click();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
-        System.out.println(" THANK YOU ");
+        WebElement orderConfirmationNum = driver.findElement(By.xpath("//*[@id='order_confirmation']/div[1]/div/h3"));
 
-        System.out.println(" Your Order Confirmation no # :- 202003312316024893392 ");
+        WebElement orderConfirmationEmail = driver.findElement(By.xpath("//*[@id='order_confirmation']/div[1]/div/p/span"));
 
-        System.out.println(" A confirmation email will be sent to tauhidechy@outlook.com. ");
+        System.out.println(" >>>>>>>>>>>>>>>>>>>>>> ORDER CONFIRMATION NUMBER <<<<<<<<<<<<<<<<<<<< ");
+        System.out.println(orderConfirmationNum.getText());
+
+        System.out.println(" >>>>>>>>>>>>>>>>>>>>>> ORDER CONFIRMATION E@MAIL <<<<<<<<<<<<<<<<<<<< ");
+        System.out.println(orderConfirmationEmail.getText());
+
+        //Assert.assertTrue(orderConfirmationEmail.getText().contains(" tauhidechy147@outlook.com"));
+
+        Assert.assertFalse(orderConfirmationEmail.getText().contains("tauhidechy147@outlook.com"));
 
 
 
