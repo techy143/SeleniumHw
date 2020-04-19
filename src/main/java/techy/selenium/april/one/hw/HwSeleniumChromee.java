@@ -1,8 +1,5 @@
 package techy.selenium.april.one.hw;
 
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,13 +16,13 @@ public class HwSeleniumChromee {
     }
 */
 
-    @BeforeClass
+   // @BeforeClass
     public static void beforeClass(){
 
 
     }
 
-    @Test
+   // @Test
 
     public void hwchromee () throws Exception{
         System.setProperty("webdriver.chrome.driver","/Users/tuhidzmac/Projects/drivers/chromedriver");
@@ -176,7 +173,7 @@ public class HwSeleniumChromee {
 
         //Assert.assertTrue(orderConfirmationEmail.getText().contains(" tauhidechy147@outlook.com"));
 
-        Assert.assertFalse(orderConfirmationEmail.getText().contains("tauhidechy147@outlook.com"));
+       // Assert.assertFalse(orderConfirmationEmail.getText().contains("tauhidechy147@outlook.com"));
 
 
 
