@@ -20,12 +20,13 @@ public class BaseTestClass {
         public WebDriver driver;
 
 
-        @BeforeClass
+    @BeforeClass
         public void setUpMethod(){
             initilization();
             logInPage = new LoginPage(driver);
             homePage = new HomePage(driver);
             iteam = new ShippingPage(driver);
+
 
 
         }

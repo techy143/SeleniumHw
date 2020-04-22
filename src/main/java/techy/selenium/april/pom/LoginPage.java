@@ -35,12 +35,12 @@ public class LoginPage extends BasePage{
 
     public void login(String expectedString) throws InterruptedException {
         clickOnElement(loginLink);
-        System.out.println("Login Link clicked!!! ");
+        System.out.println("Login link clicked!!! ");
         typeInATextBox(enterEmail, "tauhidechy147@outlook.com");
         typeInATextBox(enterPassword, "Canada143");
-        System.out.println("ID and Password entered!!! ");
+        System.out.println("email and Password entered!!! ");
         clickOnElement(logInButton);
-        System.out.println("Login button clicked!!!");
+        System.out.println("Login button clicked");
         clickOnElement(accountLink);
         Thread.sleep(3000);
         String validationString = validationStringElement.getText();

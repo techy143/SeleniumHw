@@ -39,7 +39,7 @@ public class HomePage extends BasePage {
         System.out.println("Add to Card Link is  clicked!!! ");
 
         clickOnElement(viewYourCart);
-        System.out.println("View Your Card is  Link clicked!!! ");
+        System.out.println("View Your Card Link clicked!!! ");
 
         clickOnElement(checkOutlink);
         System.out.println("CheckOut Link is  clicked!!! ");
